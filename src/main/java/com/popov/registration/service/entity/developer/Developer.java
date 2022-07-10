@@ -1,4 +1,4 @@
-package com.popov.registration.service.entity;
+package com.popov.registration.service.entity.developer;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
