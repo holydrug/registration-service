@@ -1,7 +1,6 @@
 package com.popov.registration.service.controllers;
 
-import com.popov.registration.service.entity.Developer;
-import com.popov.registration.service.entity.person.Person;
+import com.popov.registration.service.entity.developer.Developer;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
