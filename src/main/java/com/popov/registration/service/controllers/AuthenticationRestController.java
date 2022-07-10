@@ -1,5 +1,6 @@
 package com.popov.registration.service.controllers;
 
+import com.popov.registration.service.entity.authentication.AuthenticationRequestDTO;
 import com.popov.registration.service.entity.person.Person;
 import com.popov.registration.service.repository.PersonRepository;
 import com.popov.registration.service.security.JwtTokenProvider;
@@ -8,7 +9,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
