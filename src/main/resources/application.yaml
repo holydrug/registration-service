@@ -1,0 +1,21 @@
+---
+server:
+  port: 8080
+
+spring:
+  profiles:
+    active: dev
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate: org.hibernate.dialect.PostgreSQLDialect
+  security:
+    user:
+      name: root
+      password: root
+
+jwt:
+  header: Authorization
+  secret: proselyte
+  expiration: 604800

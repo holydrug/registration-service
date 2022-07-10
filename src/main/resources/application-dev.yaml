@@ -1,0 +1,10 @@
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+  datasource:
+    url: jdbc:postgresql://${POSTGRESQL_HOST:localhost}:5432/service
+    username: ${POSTGRESQL_USERNAME:root}
+    password: ${POSTGRESQL_PASSWORD:root}
+    driver-class-name: org.postgresql.Driver
