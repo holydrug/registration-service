@@ -1,5 +1,7 @@
 package com.popov.registration.service.entity.person;
 
+import com.popov.registration.service.entity.person.etc.Role;
+import com.popov.registration.service.entity.person.etc.Status;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -34,5 +36,12 @@ public class Person {
     @Column(name = "status")
     private Status status;
 
-
+    public Person(String email, String password, String firstName, String lastName, Role role, Status status) {
+        this.email = email;
+        this.password = password;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.role = role;
+        this.status = status;
+    }
 }
