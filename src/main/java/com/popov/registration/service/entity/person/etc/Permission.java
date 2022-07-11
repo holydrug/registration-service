@@ -1,4 +1,4 @@
-package com.popov.registration.service.entity.person;
+package com.popov.registration.service.entity.person.etc;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
