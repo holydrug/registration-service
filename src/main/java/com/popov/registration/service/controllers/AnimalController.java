@@ -40,7 +40,7 @@ public class AnimalController {
         animalService.saveAnimal(animal);
     }
 
-    @PostMapping
+    @PostMapping("/{id}")
     @PreAuthorize("hasAuthority('persons:write')")
     public void updateAnimal(@RequestBody Animal animal) {
         animalService.updateAnimal(animal);
