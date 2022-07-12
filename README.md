@@ -5,6 +5,7 @@
 - [Logic](#Logic)
   - [JWT token provider](#JWT-token-provider)
   - [Password Encoder](#Password-Encoder)
+- [Docker](#Docker)
 
 
 
