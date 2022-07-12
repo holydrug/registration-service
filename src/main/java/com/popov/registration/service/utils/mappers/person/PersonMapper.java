@@ -6,8 +6,7 @@ import com.popov.registration.service.entity.person.etc.Role;
 import com.popov.registration.service.entity.person.etc.Status;
 import com.popov.registration.service.utils.mappers.person.qualifires.ToDefaultRole;
 import com.popov.registration.service.utils.mappers.person.qualifires.ToDefaultStatus;
-import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
+import org.mapstruct.*;
 import org.mapstruct.factory.Mappers;
 
 @Mapper(componentModel = "spring")
@@ -17,9 +16,11 @@ public interface PersonMapper {
 
     @Mapping(target = "role", qualifiedBy = ToDefaultRole.class)
     @Mapping(target = "status", qualifiedBy = ToDefaultStatus.class)
+    @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
     Person toPerson(PersonDTO personDTO);
 
-
+    @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
+    void updatePersonFromDto(Person personFrom, @MappingTarget Person personTo);
 
 
     @ToDefaultRole
