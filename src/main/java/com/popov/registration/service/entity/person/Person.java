@@ -1,5 +1,7 @@
 package com.popov.registration.service.entity.person;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.popov.registration.service.entity.person.etc.Logins;
 import com.popov.registration.service.entity.person.etc.Role;
 import com.popov.registration.service.entity.person.etc.Status;
 import lombok.AllArgsConstructor;
@@ -13,7 +15,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "persons")
+@Table(name = "persons", uniqueConstraints = @UniqueConstraint(columnNames={"email"}))
 public class Person {
 
     @Id
@@ -36,6 +38,10 @@ public class Person {
     @Column(name = "status")
     private Status status;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JsonIgnore
+    @JoinColumn(name = "login_id", referencedColumnName = "person_id")
+    private Logins logins;
     public Person(String email, String password, String firstName, String lastName, Role role, Status status) {
         this.email = email;
         this.password = password;
@@ -43,5 +49,15 @@ public class Person {
         this.lastName = lastName;
         this.role = role;
         this.status = status;
+    }
+
+    public Person(String email, String password, String firstName, String lastName, Role role, Status status, Logins logins) {
+        this.email = email;
+        this.password = password;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.role = role;
+        this.status = status;
+        this.logins = logins;
     }
 }
