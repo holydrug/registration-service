@@ -40,5 +40,34 @@
 
 
 ## Docker ##
+> In docker-compose file included two services: pgadmin client(to check postgres db) and postgres
 
     You should run docker-compose file from docker dir to be able connect to postgres with pgadmin
+- data will be saved for pgadmin in docker/pgadmin
+- data will be saved for postgres in docker/postgres/data/pgdata
+    >To see pgdata execute from root:
+    
+      ls -la docker/postgres/data 
+    
+---
+    
+   >Locate to docker dir
+   >
+   >To invoke only postgres run: 
+  
+      docker-compose up -d postgres
+    
+   Will be launch with
+   - database: service
+   - password: root
+   - user: root
+   
+---
+
+   >To invoke only pgadmin run:
+   
+      docker-compose up -d pgadmin
+    
+   Will be launch with
+   - email: sample@gmail.com
+   - password: rooted
