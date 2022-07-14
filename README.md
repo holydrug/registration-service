@@ -46,3 +46,22 @@
     data will be saved for pgadmin in docker/pgadmin
     data will be saved for postgres in docker/postgres/data/pgdata
     To see pgdata execute from root: ls -la docker/postgres/data 
+    
+    
+   >Locate to docker di
+   >To invoke only postgres run: 
+  
+    docker-compose up -d postgres
+    
+   Will be launch with
+   database: service
+   password: root
+   user: root
+   
+   >To invoke only pgadmin run:
+   
+    docker-compose up -d pgadmin
+    
+   Will be launch with
+   email: sample@gmail.com
+   password: rooted
