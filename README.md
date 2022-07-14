@@ -52,6 +52,7 @@
 ---
     
    >Locate to docker dir
+   >
    >To invoke only postgres run: 
   
       docker-compose up -d postgres
