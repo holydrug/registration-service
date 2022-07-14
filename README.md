@@ -24,21 +24,20 @@
 
 ### JWT token provider ###
 
-  I created that class which can generate token based on secret key (you can change it in application.yaml file)
-  That token let you access endpoints if you paste it in Authorization header (e.g in Postman)
+    I created that class which can generate token based on secret key (you can change it in application.yaml file)
+    That token let you access endpoints if you paste it in Authorization header (e.g in Postman)
 
 ### Login attempt ###
 
-  A created 3 listeners: Custom, onFailureAuthentication, onSuccessAuthentication that give information to block user after 10 attempts for 1 hour
-  
-  Blocking is based on Guava cache
+    A created 3 listeners: Custom, onFailureAuthentication, onSuccessAuthentication that give information to block user after 10 attempts for 1 hour
+    Blocking is based on Guava cache
 
 ### Password Encoder ###
   
-  I create Bean with PasswordEncoder type and return built in BCryptPasswordEncoder with 12 strength
-  After that i can save password in bd
+    I create Bean with PasswordEncoder type and return built in BCryptPasswordEncoder with 12 strength
+    After that i can save password in bd
 
 
 ## Docker ##
 
-  You should run docker-compose file from docker dir to be able connect to postgres with pgadmin
+    You should run docker-compose file from docker dir to be able connect to postgres with pgadmin
