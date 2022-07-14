@@ -24,9 +24,6 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-        /*Person person = personRepository.findByEmail(email).orElseThrow(() ->
-                new UsernameNotFoundException("User doesn't exists"));
-        return SecurityUser.fromUser(person);*/
 
         String ip = getClientIP();
         if (loginAttemptService.isBlocked(ip)) {
