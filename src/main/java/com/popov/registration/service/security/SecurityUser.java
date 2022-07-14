@@ -1,7 +1,7 @@
 package com.popov.registration.service.security;
 
 import com.popov.registration.service.entity.person.Person;
-import com.popov.registration.service.entity.person.Status;
+import com.popov.registration.service.entity.person.etc.Status;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -19,12 +19,15 @@ public class SecurityUser implements UserDetails {
     private final boolean isActive;
 
 
+
     public SecurityUser(String username, String password, List<SimpleGrantedAuthority> authorities, boolean isActive) {
         this.username = username;
         this.password = password;
         this.authorities = authorities;
         this.isActive = isActive;
     }
+
+
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

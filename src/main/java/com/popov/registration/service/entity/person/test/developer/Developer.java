@@ -1,4 +1,4 @@
-package com.popov.registration.service.entity.developer;
+package com.popov.registration.service.entity.person.test.developer;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

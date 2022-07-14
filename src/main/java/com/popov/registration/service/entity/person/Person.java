@@ -1,5 +1,7 @@
 package com.popov.registration.service.entity.person;
 
+import com.popov.registration.service.entity.person.etc.Role;
+import com.popov.registration.service.entity.person.etc.Status;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,7 +13,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "persons")
+@Table(name = "persons", uniqueConstraints = @UniqueConstraint(columnNames={"email"}))
 public class Person {
 
     @Id
@@ -33,6 +35,15 @@ public class Person {
     @Enumerated(value = EnumType.STRING)
     @Column(name = "status")
     private Status status;
+
+    public Person(String email, String password, String firstName, String lastName, Role role, Status status) {
+        this.email = email;
+        this.password = password;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.role = role;
+        this.status = status;
+    }
 
 
 }
