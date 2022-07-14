@@ -60,6 +60,8 @@
    - password: root
    - user: root
    
+---
+
    >To invoke only pgadmin run:
    
       docker-compose up -d pgadmin
