@@ -48,20 +48,20 @@
     To see pgdata execute from root: ls -la docker/postgres/data 
     
     
-   >Locate to docker di
+   >Locate to docker dir
    >To invoke only postgres run: 
   
     docker-compose up -d postgres
     
    Will be launch with
-   database: service
-   password: root
-   user: root
+   - database: service
+   - password: root
+   - user: root
    
    >To invoke only pgadmin run:
    
     docker-compose up -d pgadmin
     
    Will be launch with
-   email: sample@gmail.com
-   password: rooted
+   - email: sample@gmail.com
+   - password: rooted
