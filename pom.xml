@@ -13,12 +13,14 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>registration-service</name>
 	<description>project for people</description>
+
 	<properties>
 		<java.version>11</java.version>
 		<spring-security.version>5.7.2</spring-security.version>
 		<spring.version>5.3.21</spring.version>
 		<jwt.version>0.9.1</jwt.version>
 		<mapstruct.version>1.5.2.Final</mapstruct.version>
+
 	</properties>
 	<dependencies>
 
@@ -66,6 +68,13 @@
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
+
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>31.1-jre</version>
+		</dependency>
+
 
 		<dependency>
 			<groupId>org.mapstruct</groupId>
