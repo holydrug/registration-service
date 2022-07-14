@@ -62,7 +62,7 @@
    
    >To invoke only pgadmin run:
    
-    docker-compose up -d pgadmin
+      docker-compose up -d pgadmin
     
    Will be launch with
    - email: sample@gmail.com
