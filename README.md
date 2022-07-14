@@ -49,6 +49,7 @@
     
       ls -la docker/postgres/data 
     
+---
     
    >Locate to docker dir
    >To invoke only postgres run: 
