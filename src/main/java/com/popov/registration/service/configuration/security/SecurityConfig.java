@@ -1,4 +1,4 @@
-package com.popov.registration.service.configuration;
+package com.popov.registration.service.configuration.security;
 
 import com.popov.registration.service.security.JwtConfigurer;
 import lombok.RequiredArgsConstructor;
@@ -12,10 +12,6 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.web.servlet.LocaleResolver;
-import org.springframework.web.servlet.i18n.SessionLocaleResolver;
-
-import java.util.Locale;
 
 
 @Configuration
@@ -55,10 +51,5 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder(12);
     }
 
-    @Bean
-    public LocaleResolver localeResolver() {
-        SessionLocaleResolver slr = new SessionLocaleResolver();
-        slr.setDefaultLocale(Locale.US);
-        return slr;
-    }
+
 }
