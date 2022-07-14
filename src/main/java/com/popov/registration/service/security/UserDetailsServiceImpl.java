@@ -1,9 +1,9 @@
 package com.popov.registration.service.security;
 
-import com.popov.registration.service.service.authentication.attempt.LoginAttemptService;
 import com.popov.registration.service.entity.person.Person;
 import com.popov.registration.service.entity.person.etc.Status;
 import com.popov.registration.service.repository.PersonRepository;
+import com.popov.registration.service.service.authentication.attempt.LoginAttemptService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
