@@ -29,7 +29,7 @@
 
 ### Login attempt ###
 
-    A created 3 listeners: Custom, onFailureAuthentication, onSuccessAuthentication
+    A created 3 listeners: Custom(check ip for logging user), onFailureAuthentication, onSuccessAuthentication
     Listeners give me information to block user after 10 attempts for 1 hour
     Blocking is based on Guava cache
 
